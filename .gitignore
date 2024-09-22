@@ -1,0 +1,64 @@
+# Compiled output
+dist/
+tmp/
+out-tsc/
+
+# bazel
+bazel-out/
+
+# dependencies
+node_modules/
+
+# cordova
+www/
+plugins/
+platforms/
+
+# electron
+dist-electron/
+dist-packages/
+electron.main.js/
+
+# idea
+.idea/*
+!.idea/runConfigurations/
+!.idea/codeStyleSettings.xml
+
+# eclipse
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+#
+xcuserdata/
+*.sublime-workspace
+
+# vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Maven
+target/
+log/
+
+# Misc
+.sass-cache/
+connect.lock/
+coverage
+libpeerconnection.log/
+npm-debug.log
+yarn-error.log
+testem.log
+typings/
+reports/
+**/src/translations/template.*
+# /src/environments/.env.*
+
+# System Files
+.DS_Store
+Thumbs.db
