@@ -50,8 +50,8 @@ body {
     margin-bottom: 1em;
 }
 
-.lunch-checker-form button {
-    width: 100%;
+.lunch-checker-button {
+    width: auto;
     margin-top: 1em;
 }
 
