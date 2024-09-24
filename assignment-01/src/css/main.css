@@ -28,10 +28,11 @@ html, body {
 /* background */
 
 .bg {
-    height: 100%;
+    max-width: 100%;
+    min-height: 100%;
     background-position: center;
     background-image: url("../../img/cool-background.png");
-    background-size: auto auto;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -85,10 +86,6 @@ html, body {
 /* large devices */
 
 @media (min-width: 1200px) {
-    
-    .bg {
-        height: 100%;
-    }
 
     .lunch-checker-form {
         width: 60%;
@@ -121,10 +118,6 @@ html, body {
 /* medium devices */
 
 @media (min-width: 992px) and (max-width: 1199px) {
-    
-    .bg {
-        height: 100%;
-    }
 
     .lunch-checker-form {
         width: 80%;
@@ -158,10 +151,6 @@ html, body {
 
 @media (min-width: 768px) and (max-width: 991px) {
 
-    .bg {
-        height: 100%;
-    }
-
     .lunch-checker-form {
         width: 80%;
         height: 40%;
@@ -193,10 +182,6 @@ html, body {
 /* extra small devices */
 
 @media (max-width: 767px) {
-    
-    .bg {
-        height: 100%;
-    }
 
     .lunch-checker-form {
         width: 90%;
@@ -230,10 +215,6 @@ html, body {
 
 @media (max-width: 479px) {
 
-    .bg {
-        height: 100%;
-    }
-
     .lunch-checker-form {
         width: 90%;
         height: 40%;
@@ -258,6 +239,14 @@ html, body {
     
     .error-message {
         font-size: 0.5em;
+    }
+
+}
+
+@media only screen and (orientation: portrait) {
+    
+    .bg {
+        background-image: url("../../img/cool-background-tilted.png");
     }
 
 }
