@@ -92,7 +92,7 @@ html, body {
     .lunch-checker-form {
         width: 60%;
         height: 40%;
-        padding: 50px;
+        padding: 25px;
         margin-top: 7em;
         margin-left: 20%;
         margin-right: 20%;
@@ -105,13 +105,13 @@ html, body {
 @media (min-width: 992px) and (max-width: 1199px) {
     
     .bg {
-        height: 558px;
+        height: 100%;
     }
 
     .lunch-checker-form {
         width: 80%;
         height: 40%;
-        padding: 50px;
+        padding: 25px;
         margin-top: 7em;
         margin-left: 10%;
         margin-right: 10%;
@@ -124,13 +124,13 @@ html, body {
 @media (min-width: 768px) and (max-width: 991px) {
 
     .bg {
-        height: 432px;
+        height: 100%;
     }
 
     .lunch-checker-form {
         width: 80%;
         height: 40%;
-        padding: 50px;
+        padding: 20px;
         margin-top: 7em;
         margin-left: 10%;
         margin-right: 10%;
@@ -143,13 +143,13 @@ html, body {
 @media (max-width: 767px) {
     
     .bg {
-        height: 432px;
+        height: 100%;
     }
 
     .lunch-checker-form {
         width: 90%;
         height: 40%;
-        padding: 50px;
+        padding: 20px;
         margin-top: 7em;
         margin-left: 5%;
         margin-right: 5%;
@@ -162,13 +162,13 @@ html, body {
 @media (max-width: 479px) {
 
     .bg {
-        height: 432px;
+        height: 100%;
     }
 
     .lunch-checker-form {
         width: 90%;
         height: 40%;
-        padding: 50px;
+        padding: 5px;
         margin-top: 7em;
         margin-left: 5%;
         margin-right: 5%;
