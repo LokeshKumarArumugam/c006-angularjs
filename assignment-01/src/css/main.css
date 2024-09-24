@@ -20,7 +20,15 @@
 
 /* body */
 
-body {
+html, body {
+    height: 100%;
+}
+
+/* background */
+
+.bg {
+    height: 100%;
+    background-position: center;
     background-image: url("../../img/cool-background.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -39,6 +47,7 @@ body {
     padding: 50px;
     margin-top: 7em;
     margin-left: 20%;
+    margin-right: 20%;
     background: linear-gradient(45deg, antiquewhite, darkorange);
     border: solid 2px maroon;
     border-radius: 15px;
@@ -70,4 +79,99 @@ body {
     color: maroon;
     font-size: 1.3em; 
     font-weight: bold; 
+}
+
+/* large devices */
+
+@media (min-width: 1200px) {
+    
+    .bg {
+        height: 100%;
+    }
+
+    .lunch-checker-form {
+        width: 60%;
+        height: 40%;
+        padding: 50px;
+        margin-top: 7em;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+}
+  
+/* medium devices */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+    .bg {
+        height: 558px;
+    }
+
+    .lunch-checker-form {
+        width: 80%;
+        height: 40%;
+        padding: 50px;
+        margin-top: 7em;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+}
+  
+/* small devices */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .bg {
+        height: 432px;
+    }
+
+    .lunch-checker-form {
+        width: 80%;
+        height: 40%;
+        padding: 50px;
+        margin-top: 7em;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+}
+  
+/* extra small devices */
+
+@media (max-width: 767px) {
+    
+    .bg {
+        height: 432px;
+    }
+
+    .lunch-checker-form {
+        width: 90%;
+        height: 40%;
+        padding: 50px;
+        margin-top: 7em;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+}
+  
+/* super extra small devices */
+
+@media (max-width: 479px) {
+
+    .bg {
+        height: 432px;
+    }
+
+    .lunch-checker-form {
+        width: 90%;
+        height: 40%;
+        padding: 50px;
+        margin-top: 7em;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
 }
