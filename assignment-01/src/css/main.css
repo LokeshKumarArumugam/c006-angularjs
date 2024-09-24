@@ -86,7 +86,7 @@ html, body {
 @media (min-width: 1200px) {
     
     .bg {
-        height: 100%;
+        height: 675px;
     }
 
     .lunch-checker-form {
@@ -105,7 +105,7 @@ html, body {
 @media (min-width: 992px) and (max-width: 1199px) {
     
     .bg {
-        height: 100%;
+        height: 558px;
     }
 
     .lunch-checker-form {
@@ -124,7 +124,7 @@ html, body {
 @media (min-width: 768px) and (max-width: 991px) {
 
     .bg {
-        height: 100%;
+        height: 432px;
     }
 
     .lunch-checker-form {
@@ -143,7 +143,7 @@ html, body {
 @media (max-width: 767px) {
     
     .bg {
-        height: 100%;
+        height: 432px;
     }
 
     .lunch-checker-form {
@@ -162,7 +162,7 @@ html, body {
 @media (max-width: 479px) {
 
     .bg {
-        height: 100%;
+        height: 432px;
     }
 
     .lunch-checker-form {
