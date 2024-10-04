@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="shoppingListCheckOffAppModule">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping List Checker Application</title>
+    
+    <base href="#!/" />
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-icons/1.10.3/font/bootstrap-icons.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme/3.3.7/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/bootstrap/3.3.7/font/glyphicons-halflings-regular.svg" />
+
+    <link rel="stylesheet" type="text/css" href="src/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="src/css/tab-style.css" />
+</head>
+<body ng-controller="shoppingListCheckOffController" ng-strict-di>
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <div class="nav-title">{{ "Shopping List Checker Application" | uppercase }}</div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container shopping-checker-div">
+        <div class="tab-section-title">
+            <h2>{{ "Shopping Area" | uppercase }}</h2>
+            <p>{{ "Manage all the products in the shopping area." | uppercase }}</p>
+        </div>
+        
+        <!-- tab links -->
+        <div class="tab">
+            <button ng-class="{ tablinks: true, active: appCtrl.isActiveTab('cart') }" ng-click="appCtrl.changeTab('cart');">To Buy (Cart)</button>
+            <button ng-class="{ tablinks: true, active: appCtrl.isActiveTab('bought') }" ng-click="appCtrl.changeTab('bought');">Already Bought (Orders)</button>
+        </div>
+
+        <!-- tab contents -->
+        <!-- cart -->
+        <div id="cart" class="tab-content" ng-if="appCtrl.isActiveTab('cart');" ng-controller="toBuyController as cartCtrl">
+            <ul class="shopping-list" ng-if="!cartCtrl.isEmptyBuyItems();">
+                <li ng-repeat="item in cartCtrl.toBuyItems track by $index">
+                    <span class="padding-right: 2em;">Buy {{ item.quantity }} {{ item.name }}(s)</span>
+                    <button class="btn btn-primary" ng-click="cartCtrl.buy(item.name)">Bought</button>
+                </li>
+            </ul>
+            <div class="message-div">
+                <span class="alert alert-info warning-message" ng-if="cartCtrl.isEmptyBuyItems();">{{ cartCtrl.emptyGone }}</span>
+            </div>
+        </div>
+        <!-- bought -->
+        <div id="bought" class="tab-content" ng-if="appCtrl.isActiveTab('bought');" ng-controller="alreadyBoughtController as ordersCtrl">
+            <ul class="shopping-list" ng-if="!ordersCtrl.isEmptyBoughtItems();">
+                <li ng-repeat="item in ordersCtrl.alreadyBoughtItems track by $index">
+                    <span>Bought {{ item.quantity }} {{ item.name }}(s)</span>
+                </li>
+            </ul>
+            <div class="message-div">
+                <span class="alert alert-info warning-message" ng-if="ordersCtrl.isEmptyBoughtItems();">{{ ordersCtrl.emptyGone }}</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- libraries -->
+    <script type="text/javascript" src="lib/angular.js"></script>
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/underscore-min.js"></script>
+    <script type="text/javascript" src="lib/require.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- shopping list checker application -->
+    <script type="text/javascript" src="src/js/app.module.js"></script>
+    <script type="text/javascript" src="src/js/app.service.js"></script>
+    <script type="text/javascript" src="src/js/app.controller.js"></script>
+</body>
+</html>
