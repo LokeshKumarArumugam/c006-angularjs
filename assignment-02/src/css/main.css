@@ -45,6 +45,7 @@ html, body {
 
 .shopping-list {
     list-style: none;
+    padding-left: 0px;
     font-size: 1.5em;
 }
 
