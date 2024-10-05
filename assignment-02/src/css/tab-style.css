@@ -67,8 +67,8 @@
 }
 
 .tab-btn {
-    padding: inherit;
-    font-size: inherit;
+    padding: 6px;
+    font-size: 17px;
 }
 
 /* large devices */
@@ -93,8 +93,8 @@
     }
 
     .tab-btn {
-        padding: inherit;
-        font-size: inherit;
+        padding: 6px;
+        font-size: 17px;
     }
 
 }
@@ -121,8 +121,8 @@
     }
 
     .tab-btn {
-        padding: inherit;
-        font-size: inherit;
+        padding: 6px;
+        font-size: 17px;
     }
 
 }
