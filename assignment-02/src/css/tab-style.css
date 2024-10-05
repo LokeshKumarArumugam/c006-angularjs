@@ -66,6 +66,11 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 }
 
+.tab-btn {
+    padding: inherit;
+    font-size: inherit;
+}
+
 /* large devices */
 
 @media (min-width: 1200px) {
@@ -85,6 +90,11 @@
 
     .tab-content {
         padding: 6px 12px;
+    }
+
+    .tab-btn {
+        padding: inherit;
+        font-size: inherit;
     }
 
 }
@@ -110,6 +120,11 @@
         padding: 6px 12px;
     }
 
+    .tab-btn {
+        padding: inherit;
+        font-size: inherit;
+    }
+
 }
 
 /* small devices */
@@ -131,6 +146,11 @@
 
     .tab-content {
         padding: 5px 10px;
+    }
+
+    .tab-btn {
+        padding: 5px;
+        font-size: 12px;
     }
 
 }
@@ -156,6 +176,11 @@
         padding: 5px 10px;
     }
 
+    .tab-btn {
+        padding: 5px;
+        font-size: 12px;
+    }
+
 }
 
 /* super extra small devices */
@@ -177,6 +202,11 @@
 
     .tab-content {
         padding: 4px 8px;
+    }
+
+    .tab-btn {
+        padding: 4px;
+        font-size: 8px;
     }
 
 }

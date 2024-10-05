@@ -44,7 +44,7 @@
             <ul class="shopping-list" ng-if="!cartCtrl.isEmptyBuyItems();">
                 <li ng-repeat="item in cartCtrl.toBuyItems track by $index">
                     <span class="padding-right: 2em;">Buy {{ item.quantity }} {{ item.name }}(s)</span>
-                    <button class="btn btn-primary" ng-click="cartCtrl.buy(item.name)">Bought</button>
+                    <button class="btn btn-primary tab-btn" ng-click="cartCtrl.buy(item.name)">Bought</button>
                 </li>
             </ul>
             <div class="message-div">
