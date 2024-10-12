@@ -48,23 +48,26 @@
         $ctrl.filterMenu = function(searchString) {
             
             var filteredMenuItems = [ ];
-            var promise = chineseMenuService.getAllMenu();
 
-            promise.then(function(result) {
-                var arrays = _.pluck(result, "menu_items");
-                
-                arrays.forEach(function(array) {
-                    array.forEach(function(item) {
-                        if(item.description.includes(searchString)) {
-                            filteredMenuItems.push(item);
-                        }
+            if(searchString.length > 0) {
+                var promise = chineseMenuService.getAllMenu();
+
+                promise.then(function(result) {
+                    var arrays = _.pluck(result, "menu_items");
+                    
+                    arrays.forEach(function(array) {
+                        array.forEach(function(item) {
+                            if(item.description.includes(searchString)) {
+                                filteredMenuItems.push(item);
+                            }
+                        });
                     });
+                }).catch(function(error) {
+                    return error;
                 });
+            }
 
-                $ctrl.filteredMenu = filteredMenuItems;
-            }).catch(function(error) {
-                return error;
-            });
+            $ctrl.filteredMenu = filteredMenuItems;
             
         };
 
