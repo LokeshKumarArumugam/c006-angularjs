@@ -1,0 +1,37 @@
+<div class="found-items-div">
+    <div class="fix-thead" ng-if="!itemsCtrl.isEmptyMenu();">
+        <table class="tbg-dark-cyan-middle-indigo-45">
+            <thead>
+                <tr>
+                    <th>{{ itemsCtrl.serialNo }}</th>
+                    <th>{{ itemsCtrl.itemName }}</th>
+                    <th>{{ itemsCtrl.itemShortName }}</th>
+                    <th>{{ itemsCtrl.smallPortionName }}</th>
+                    <th>{{ itemsCtrl.priceSmall }}</th>
+                    <th>{{ itemsCtrl.largePortionName }}</th>
+                    <th>{{ itemsCtrl.priceLarge }}</th>
+                    <th>{{ itemsCtrl.description }}</th>
+                    <th>{{ itemsCtrl.updates }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in itemsCtrl.items track by $index">
+                    <td>{{ $index + 1 }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.short_name }}</td>
+                    <td>{{ item.small_portion_name }}</td>
+                    <td>{{ item.price_small }}</td>
+                    <td>{{ item.large_portion_name }}</td>
+                    <td>{{ item.price_large }}</td>
+                    <td>{{ item.description }}</td>
+                    <td>
+                        <button type="button" class="btn btn-danger tab-btn" ng-click="itemsCtrl.remove({ foundItemIndex: '$index' })">{{ itemsCtrl.removeItemBtnName }}</button>
+                    </td>
+                </tr>
+            </table>
+        </table>
+    </div>
+    <div class="message-div">
+        <span class="alert alert-info warning-message" ng-if="itemsCtrl.isEmptyMenu();">{{ itemsCtrl.emptyGone }}</span>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+@charset "ISO-8859-1";
+
+/* found items div */
+
+.found-items-div {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    font-size: 15px;
+}
+
+/* large devices */
+
+@media (min-width: 1200px) {
+
+    .found-items-div {
+        font-size: 15px;
+    }
+
+}
+
+/* medium devices */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .found-items-div {
+        font-size: 15px;
+    }
+
+}
+
+/* small devices */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .found-items-div {
+        font-size: 12px;
+    }
+
+}
+
+/* extra small devices */
+
+@media (max-width: 767px) {
+
+    .found-items-div {
+        font-size: 12px;
+    }
+
+}
+
+/* super extra small devices */
+
+@media (max-width: 479px) {
+
+    .found-items-div {
+        font-size: 8px;
+    }
+
+}

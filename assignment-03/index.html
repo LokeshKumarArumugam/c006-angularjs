@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="chineseMenuAppModule">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chinese Menu</title>
+    
+    <base href="#!/" />
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-icons/1.10.3/font/bootstrap-icons.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme/3.3.7/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/bootstrap/3.3.7/font/glyphicons-halflings-regular.svg" />
+
+    <link rel="stylesheet" type="text/css" href="src/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="src/css/tab-style.css" />
+    <link rel="stylesheet" type="text/css" href="src/css/tables.css" />
+    <!-- found items -->
+    <link rel="stylesheet" type="text/css" href="src/css/found-items/found-items.css" />
+</head>
+<body ng-controller="chineseMenuAppController" ng-strict-di>
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <div class="nav-title">{{ "Chinese Menu Application" | uppercase }}</div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-1 menu-bar-div">
+        <div class="tab-section-title">
+            <h2>{{ "Chinese Menu Area" | uppercase }}</h2>
+            <br />
+            <p>{{ "Manage all the products in the chinese menu area." | uppercase }}</p>
+        </div>
+        
+        <!-- tab links -->
+        <div class="tab">
+            <button ng-class="{ tablinks: true, active: appCtrl.isActiveTab('menu') }" ng-click="appCtrl.changeTab('menu');">Chinese Menu Choice</button>
+        </div>
+
+        <!-- tab contents -->
+        <!-- menu -->
+        <div id="menu" class="tab-content" ng-if="appCtrl.isActiveTab('menu');" ng-controller="filteringMenuController as menuCtrl">
+            <div class="form-group search-form-div">
+                <input type="text" placeholder="Search Term" class="search-form-input" ng-model="menuCtrl.searchString">
+                <button type="button" class="btn btn-primary tab-btn" ng-click="menuCtrl.filterMenu(menuCtrl.searchString);">{{ menuCtrl.searchBtnName }}</button>
+            </div>
+            
+            <found-items found-items="menuCtrl.filteredMenu" on-remove="menuCtrl.removeMenuItem(foundItemIndex);"></found-items>
+        </div>
+    </div>
+
+    <!-- libraries -->
+    <script type="text/javascript" src="lib/angular.js"></script>
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/underscore-min.js"></script>
+    <script type="text/javascript" src="lib/require.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- chinese restaurant application -->
+    <script type="text/javascript" src="src/js/app.module.js"></script>
+    <script type="text/javascript" src="src/js/app.constant.js"></script>
+    <script type="text/javascript" src="src/js/app.service.js"></script>
+    <script type="text/javascript" src="src/js/app.controller.js"></script>
+    <!-- error -->
+    <script type="text/javascript" src="src/js/error.service.js"></script>
+    <!-- found items -->
+    <script type="text/javascript" src="src/js/found-items/found-items.module.js"></script>
+    <script type="text/javascript" src="src/js/found-items/found-items.directive.js"></script>
+    <script type="text/javascript" src="src/js/found-items/found-items.controller.js"></script>
+</body>
+</html>

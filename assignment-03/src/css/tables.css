@@ -1,0 +1,78 @@
+@charset "ISO-8859-1";
+
+/* table fix header (thead) */
+
+.fix-thead {
+	overflow-x: auto;
+	overflow-y: auto;
+	width: auto;
+	height: auto;
+	max-width: 90%;
+	max-height: 750px;
+	margin: auto;
+	box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.25);
+	border-radius: 15px;
+}
+.fix-thead table {
+	width: 100%;
+	height: 100%;
+}
+.fix-thead thead {
+	position: sticky;
+	top: 0;
+	box-shadow: 0px 20px 20px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* table gradient div */
+
+.tbg-div-pad-10 {
+    padding: 10px;
+}
+
+.tbg-div-pad-15 {
+    padding: 15px;
+}
+
+.tbg-div-pad-20 {
+    padding: 20px;
+}
+
+/* dark-cyan to middle-indigo 45-deg */
+
+.tbg-dark-cyan-middle-indigo-45 {
+    margin: auto;
+    background: linear-gradient(45deg, darkcyan, #5f2c82);
+	border-collapse: collapse;
+	border-radius: 15px;
+	box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.25);
+	text-align: center;
+}
+.tbg-dark-cyan-middle-indigo-45 thead th, .tbg-dark-cyan-middle-indigo-45 tbody td {
+	padding: 15px;
+    color: wheat;
+    border: solid 1px wheat;
+}
+.tbg-dark-cyan-middle-indigo-45 thead th {
+    color: wheat;
+    background-color: indigo;
+	font-weight: bold;
+	text-align: center;
+}
+.tbg-dark-cyan-middle-indigo-45 thead tr:first-child th {
+	border-top: none;
+}
+.tbg-dark-cyan-middle-indigo-45 tbody tr:last-child td {
+	border-bottom: none;
+}
+.tbg-dark-cyan-middle-indigo-45 thead tr th:first-child {
+	border-left: none;
+}
+.tbg-dark-cyan-middle-indigo-45 tbody tr td:first-child {
+	border-left: none;
+}
+.tbg-dark-cyan-middle-indigo-45 thead tr th:last-child {
+	border-right: none;
+}
+.tbg-dark-cyan-middle-indigo-45 tbody tr td:last-child {
+	border-right: none;
+}
