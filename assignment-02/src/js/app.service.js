@@ -44,11 +44,11 @@
 
         service.isEmptyBuyItems = function() {
             return (toBuyItems && toBuyItems.length == 0);
-        }
+        };
 
         service.isEmptyBoughtItems = function() {
             return (alreadyBoughtItems && alreadyBoughtItems.length == 0);
-        }
+        };
 
         return service;
 
