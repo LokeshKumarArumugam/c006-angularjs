@@ -23,7 +23,7 @@
         };
         $ctrl.isActiveTab = function(tabName) {
             return ($ctrl.activeTab === tabName);
-        }
+        };
 
         $scope.appCtrl = $ctrl;
 
