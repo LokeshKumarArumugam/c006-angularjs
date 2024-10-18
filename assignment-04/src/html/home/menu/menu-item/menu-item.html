@@ -1,0 +1,45 @@
+<div class="container-1 menu-view-form">
+    <div class="home-view-nav">
+        <a ui-sref="home"> {{ ::homeCtrl.nav.home }} &lt; {{ ::homeCtrl.nav.menu }}</a> &lt; 
+        <a ui-sref="home.categories">{{ ::homeCtrl.nav.categories }}</a> &lt; 
+        <a ui-sref="home.items">{{ ::homeCtrl.nav.items }}</a> &lt; 
+        <span>{{ ::homeCtrl.nav.item }}</span>
+    </div>
+
+    <div class="form-group search-form-div">
+        <input type="text" placeholder="Search Item By Short Name" class="search-form-input" ng-model="itemCtrl.searchShortName">
+        <button type="button" class="btn btn-primary tab-btn" ng-click="itemCtrl.searchMenuItem(itemCtrl.searchShortName);">{{ ::itemCtrl.searchBtnName }}</button>
+    </div>
+
+    <div class="menu-item-div">
+        <div class="fix-thead" ng-if="!itemCtrl.isEmptyMenuItem();">
+            <table class="tbg-dark-cyan-middle-indigo-45">
+                <thead>
+                    <tr>
+                        <th>{{ ::itemCtrl.itemName }}</th>
+                        <th>{{ ::itemCtrl.itemShortName }}</th>
+                        <th>{{ ::itemCtrl.smallPortionName }}</th>
+                        <th>{{ ::itemCtrl.priceSmall }}</th>
+                        <th>{{ ::itemCtrl.largePortionName }}</th>
+                        <th>{{ ::itemCtrl.priceLarge }}</th>
+                        <th>{{ ::itemCtrl.description }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ itemCtrl.item.name }}</td>
+                        <td>{{ itemCtrl.item.short_name }}</td>
+                        <td>{{ itemCtrl.item.small_portion_name }}</td>
+                        <td>{{ itemCtrl.item.price_small }}</td>
+                        <td>{{ itemCtrl.item.large_portion_name }}</td>
+                        <td>{{ itemCtrl.item.price_large }}</td>
+                        <td>{{ itemCtrl.item.description }}</td>
+                    </tr>
+                </table>
+            </table>
+        </div>
+        <div class="message-div">
+            <span class="alert alert-info warning-message" ng-if="itemCtrl.isEmptyMenuItem();">{{ ::itemCtrl.emptyGone }}</span>
+        </div>
+    </div>
+</div>

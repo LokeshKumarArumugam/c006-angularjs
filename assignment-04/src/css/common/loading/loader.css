@@ -1,0 +1,61 @@
+@charset "ISO-8859-1";
+
+/* loading indicator */
+
+.loading-indicator {
+    display: inline-block;
+    position: fixed;
+    width: 20%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 100;
+    background-color: beige;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid darkcyan; 
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+.loading-indicator img {
+    width: 70px;
+    margin-top: 1em;
+}
+
+.loading-indicator h2 {
+    margin-bottom: 1em;
+}
+
+.loading-indicator h1, .loading-indicator h2, .loading-indicator h3 {
+    color: darkcyan;
+}
+
+/* initial loading */
+
+.initial-loading {
+    margin-top: 15em;
+}
+
+/* ui view placeholder */
+
+.ui-view-placeholder {
+    margin-top: 15em;
+}
+
+/* loading blur */
+
+.loading-blur {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    -o-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.10);
+}
