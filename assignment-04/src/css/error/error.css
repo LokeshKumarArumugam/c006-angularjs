@@ -1,0 +1,18 @@
+@charset "ISO-8859-1";
+
+/* error-view-div */
+
+.error-view-div {
+    margin-top: 7.5em;
+    margin-bottom: 10em;
+}
+
+.error-view-div .error-messages-div {
+    margin-bottom: 5em;
+}
+
+.error-view-div #error-img {
+    padding-left: 5%;
+    max-width: 100%;
+    max-height: 100%;
+}

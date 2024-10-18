@@ -1,0 +1,33 @@
+@charset "ISO-8859-1";
+
+/* navibar head */
+
+.navibar-head {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-align: center;
+}
+
+.navibar-head li {
+    display: inline-block;
+    margin: 0px;
+    vertical-align: middle;
+}
+
+/* logo image */
+
+.navibar-head li .logo-img {
+    width: 25px;
+    height: 25px;
+    color: aqua;
+    font-size: 25px;
+}
+
+/* navibar label */
+
+.navibar-head li .navibar-label {
+    padding-right: 50px;
+    color: aqua;
+}

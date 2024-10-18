@@ -1,0 +1,31 @@
+<div class="container-1 menu-view-form">
+    <div class="home-view-nav">
+        <a ui-sref="home">{{ ::homeCtrl.nav.home }} &lt; {{ ::homeCtrl.nav.menu }}</a> &lt; 
+        <span>{{ ::homeCtrl.nav.categories }}</span>
+    </div>
+
+    <div class="menu-categories-div">
+        <div class="fix-thead">
+            <table class="tbg-dark-cyan-middle-indigo-45">
+                <thead>
+                    <tr>
+                        <th>{{ ::categoriesCtrl.serialNo }}</th>
+                        <th>{{ ::categoriesCtrl.id }}</th>
+                        <th>{{ ::categoriesCtrl.name }}</th>
+                        <th>{{ ::categoriesCtrl.short_name }}</th>
+                        <th>{{ ::categoriesCtrl.special_instructions }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="menu-categories-row" ng-repeat="category in categoriesCtrl.categories track by $index" ui-sref="home.items({categoryShortName: category.short_name})">
+                        <td>{{ $index + 1 }}</td>
+                        <td>{{ category.id }}</td>
+                        <td>{{ category.name }}</td>
+                        <td>{{ category.short_name }}</td>
+                        <td>{{ category.special_instructions }}</td>
+                    </tr>
+                </table>
+            </table>
+        </div>
+    </div>
+</div>

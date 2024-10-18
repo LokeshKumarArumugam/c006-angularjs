@@ -1,0 +1,196 @@
+@charset "ISO-8859-1";
+
+/* menu items div */
+
+.menu-items-div {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    font-size: 15px;
+}
+
+/* menu items row */
+
+.menu-items-row:hover {
+    cursor: pointer;
+    background-color: blueviolet;
+    color: maroon;
+}
+
+/* search form div */
+
+.search-form-div {
+    margin: solid 0 auto;
+    margin-top: 3em;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+/* search form */
+
+.search-form-div .search-form-input {
+    width: 40%;
+    margin-right: 1em;
+}
+
+/* message div */
+
+.message-div { 
+    width: 100%;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+/* success message */
+
+.success-message { 
+    color: darkolivegreen;
+    font-size: 1.3em; 
+    font-weight: bold; 
+}
+
+/* error message */
+
+.error-message { 
+    color: maroon;
+    font-size: 1.3em; 
+    font-weight: bold; 
+}
+
+/* warning message */
+
+.warning-message {
+    color: darkgoldenrod;
+    font-size: 1.3em; 
+    font-weight: bold;
+}
+
+/* large devices */
+
+@media (min-width: 1200px) {
+
+    .menu-items-div {
+        font-size: 15px;
+    }
+
+    .search-form-div {
+        font-size: 1.25em;
+    }
+
+    .success-message {
+        font-size: 1em;
+    }
+    
+    .error-message {
+        font-size: 1em;
+    }
+
+    .warning-message {
+        font-size: 1em;
+    }
+
+}
+
+/* medium devices */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .menu-items-div {
+        font-size: 15px;
+    }
+
+    .search-form-div {
+        font-size: 1em;
+    }
+
+    .success-message {
+        font-size: 1em;
+    }
+    
+    .error-message {
+        font-size: 1em;
+    }
+
+    .warning-message {
+        font-size: 1em;
+    }
+
+}
+
+/* small devices */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .menu-items-div {
+        font-size: 12px;
+    }
+
+    .search-form-div {
+        font-size: 0.8em;
+    }
+
+    .success-message {
+        font-size: 0.8em;
+    }
+    
+    .error-message {
+        font-size: 0.8em;
+    }
+
+    .warning-message {
+        font-size: 0.8em;
+    }
+
+}
+
+/* extra small devices */
+
+@media (max-width: 767px) {
+
+    .menu-items-div {
+        font-size: 12px;
+    }
+
+    .search-form-div {
+        font-size: 0.5em;
+    }
+
+    .success-message {
+        font-size: 0.5em;
+    }
+    
+    .error-message {
+        font-size: 0.5em;
+    }
+
+    .warning-message {
+        font-size: 0.5em;
+    }
+
+}
+
+/* super extra small devices */
+
+@media (max-width: 479px) {
+
+    .menu-items-div {
+        font-size: 8px;
+    }
+
+    .search-form-div {
+        font-size: 0.5em;
+    }
+
+    .success-message {
+        font-size: 0.5em;
+    }
+    
+    .error-message {
+        font-size: 0.5em;
+    }
+
+    .warning-message {
+        font-size: 0.5em;
+    }
+
+}
