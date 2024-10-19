@@ -26,25 +26,26 @@
             var hrs;
             var srslen;
             var hrslen;
+            var isParameter;
 
             for(var i = 0; i < srplen; i++) {
                 srs = srPaths[i];
                 hrs = hrPaths[i];
                 srslen = srs.length;
                 hrslen = hrs.length;
+                isParameter = srs[0] == paramStart;
 
                 if(srslen == hrslen) {
                     for(var j = 0; j < srslen; j++) {
-                        if(srs[j] != hrs[j]) {
+                        if(srs[j] != hrs[j] && !isParameter) {
                             equals = false;
                             break;
                         }
                     }
-                } else if(srs[0] != paramStart) {
+                } else if(!isParameter) {
                     equals = false;
                     break;
                 }
-                
             }
         }
 
