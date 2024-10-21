@@ -19,7 +19,7 @@
         var srplen = srPaths.length;
         var hrplen = hrPaths.length;
 
-        equals = srplen == hrplen;
+        equals = srplen === hrplen;
 
         if(equals) {
             var srs;
@@ -33,11 +33,11 @@
                 hrs = hrPaths[i];
                 srslen = srs.length;
                 hrslen = hrs.length;
-                isParameter = srs[0] == paramStart;
+                isParameter = srs[0] === paramStart;
 
-                if(srslen == hrslen) {
+                if(srslen === hrslen) {
                     for(var j = 0; j < srslen; j++) {
-                        if(srs[j] != hrs[j] && !isParameter) {
+                        if(srs[j] !== hrs[j] && !isParameter) {
                             equals = false;
                             break;
                         }

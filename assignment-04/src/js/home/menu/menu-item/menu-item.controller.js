@@ -31,7 +31,7 @@
         $ctrl.searchShortName = $stateParams.itemShortName;
 
         $ctrl.retrieveItem = function() {
-            return (items === null) ? null : items.menu_items.find((item) => (item.short_name == $stateParams.itemShortName));
+            return (items === null) ? null : items.menu_items.find((item) => (item.short_name === $stateParams.itemShortName));
         };
 
         $ctrl.item = $ctrl.retrieveItem();

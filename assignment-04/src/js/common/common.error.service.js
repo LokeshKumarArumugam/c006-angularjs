@@ -81,7 +81,7 @@
                                     if(p === null) {
                                         params += "null";
                                     } else {
-                                        if(typeof(p) == "object") {
+                                        if(typeof(p) === "object") {
                                             params += "Object";
                                         } else {
                                             params += p;
@@ -89,7 +89,7 @@
                                     }
                                 }
 
-                                if(i != (length - 1)) {
+                                if(i !== (length - 1)) {
                                     params += ", ";
                                 }
                             }
