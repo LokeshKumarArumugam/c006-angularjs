@@ -1,0 +1,60 @@
+<div class="container">
+    <h2 id="sign-up-title" class="text-center">Sign Up</h2>
+    <div class="text-center">Let's get you signed up for the restaurant membership.</div>
+
+    <fieldset>
+        <form name="sign_up_form" class="sign-up-form" novalidate>
+            <legend>Sign Up</legend>
+
+            <!-- first name -->
+            <label for="firstName">First Name &emsp;&nbsp;: &emsp;</label>
+            <input type="text" name="firstName" placeholder="First Name" ng-model="signUpCtrl.user.firstName" pattern="[A-Za-z ]{3,32}" required />
+            <span class="error-message" ng-if="sign_up_form.firstName.$invalid && sign_up_form.firstName.$touched">
+                First Name must contain only alphabets with minimum 3 characters
+            </span>
+            <br />
+
+            <!-- last name -->
+            <label for="lastName">Last Name &emsp;&nbsp;: &emsp;</label>
+            <input type="text" name="lastName" placeholder="Last Name" ng-model="signUpCtrl.user.lastName" pattern="[A-Za-z]{3,32}" required />
+            <span class="error-message" ng-if="sign_up_form.lastName.$invalid && sign_up_form.lastName.$touched">
+                Last Name must contain only alphabets with minimum 3 characters
+            </span>
+            <br />
+
+            <!-- email -->
+            <label for="email">Email &emsp;&emsp;&emsp;&ensp;: &emsp;</label>
+            <input type="email" name="email" placeholder="Email" ng-model="signUpCtrl.user.email" required />
+            <span class="error-message" ng-if="sign_up_form.email.$invalid && sign_up_form.email.$touched">
+                Must be a valid email address: handle@domain format
+            </span>
+            <br />
+            
+            <!-- phone number -->
+            <label for="phoneNumber">Phone No. &emsp;&nbsp;: &emsp;</label>
+            <input type="text" name="phoneNumber" placeholder="Phone ###-###-####" ng-model="signUpCtrl.user.phoneNumber" pattern="(\d{3})-(\d{3})-(\d{4})" required />
+            <span class="error-message" ng-if="sign_up_form.phoneNumber.$invalid && sign_up_form.phoneNumber.$touched">
+                Phone must be in the format ###-###-####.
+            </span>
+            <br />
+
+            <!-- favorite menu dish -->
+            <label for="favoriteDish">Favorite Dish : &emsp;</label>
+            <!-- ui-validate validates the ngModel -->
+            <input type="text" name="favoriteDish" placeholder="Favorite Dish" ng-model="signUpCtrl.user.favoriteDish" ng-model-options="{ updateOn: 'blur' }" ui-validate-async="{ itemNotFound: 'signUpCtrl.validMenuItem($value)' }" required />
+            <span class="error-message" ng-if="sign_up_form.favoriteDish.$invalid && sign_up_form.favoriteDish.$touched">
+                No such menu number exists
+            </span>
+            <br />
+
+            <!-- info div -->
+            <div id="info" class="alert alert-success" ng-if="signUpCtrl.signUpForm.completed">
+                Your information has been saved!
+            </div>
+            <br />
+
+            <!-- submit -->
+            <button class="btn btn-success" ng-disabled="sign_up_form.$invalid" ng-click="signUpCtrl.submit();">Submit</button>
+        </form>
+    </fieldset>
+</div>
