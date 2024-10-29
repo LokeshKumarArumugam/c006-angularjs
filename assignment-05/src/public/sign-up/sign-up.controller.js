@@ -18,35 +18,19 @@
         $ctrl.signUpForm.completed = false;
 
         $ctrl.validMenuItem = function(value) {
-            var promise = $q(function(resolve, reject) {
-                var promise = MenuService.getAllMenuItems();
+            return $q(function(resolve, reject) {
+                var promise = MenuService.menuItemExists(value);
 
-                promise.then(function(result) {
-                    var allMenuItems = [];
-                    var arrays = _.map(result, function(value, key, list) {
-                        return value.menu_items;
-                    });
-                    arrays.forEach(function(array) {
-                        array.forEach(function(item) {
-                            allMenuItems.push(item.short_name);
-                        });
-                    });
-    
-                    var valid = allMenuItems.findIndex(function(itemShortName) {
-                        return (value === itemShortName);
-                    }) !== -1;
-    
-                    if(valid) {
-                        resolve(valid);
+                promise.then(function(exists) {
+                    if(exists) {
+                        resolve(exists);
                     } else {
-                        reject(valid);
+                        reject(exists);
                     }
                 }).catch(function(error) {
                     reject(false);
                 });
             });
-
-            return promise;
         };
 
         $ctrl.submit = function() {
