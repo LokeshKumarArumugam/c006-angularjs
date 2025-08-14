@@ -9,29 +9,29 @@
     .directive("lkaHeaderBrand", HeaderBrandComponent);
 
     HeaderBrandComponent.$inject = [
-        "_DIR_REST_ELEM", 
-        "_DIR_REPLACE_FALSE",
-        "_DIR_EMPTY_ISOLATED_SCOPE", 
+        "_DIRECTIVE_RESTRICT_ELEMENT", 
+        "_DIRECTIVE_REPLACE_FALSE",
+        "_DIRECTIVE_EMPTY_ISOLATED_SCOPE", 
         "_HEADER_BRAND_TEMPLATE_URL", 
-        "_HEADER_BRAND_CTRL_NAME", 
-        "_HEADER_BRAND_CTRL_AS"
+        "_HEADER_BRAND_CONTROLLER_NAME", 
+        "_HEADER_BRAND_CONTROLLER_AS"
     ];
     function HeaderBrandComponent(
-        _DIR_REST_ELEM, 
-        _DIR_REPLACE_FALSE,
-        _DIR_EMPTY_ISOLATED_SCOPE,
+        _DIRECTIVE_RESTRICT_ELEMENT, 
+        _DIRECTIVE_REPLACE_FALSE,
+        _DIRECTIVE_EMPTY_ISOLATED_SCOPE,
         _HEADER_BRAND_TEMPLATE_URL, 
-        _HEADER_BRAND_CTRL_NAME, 
-        _HEADER_BRAND_CTRL_AS
+        _HEADER_BRAND_CONTROLLER_NAME, 
+        _HEADER_BRAND_CONTROLLER_AS
     ) {
 
         var ddo = { 
-            restrict: _DIR_REST_ELEM,
-            replace: _DIR_REPLACE_FALSE,
-            scope: _DIR_EMPTY_ISOLATED_SCOPE, 
+            restrict: _DIRECTIVE_RESTRICT_ELEMENT,
+            replace: _DIRECTIVE_REPLACE_FALSE,
+            scope: _DIRECTIVE_EMPTY_ISOLATED_SCOPE, 
             templateUrl: _HEADER_BRAND_TEMPLATE_URL, 
-            controller: _HEADER_BRAND_CTRL_NAME, 
-            controllerAs: _HEADER_BRAND_CTRL_AS
+            controller: _HEADER_BRAND_CONTROLLER_NAME, 
+            controllerAs: _HEADER_BRAND_CONTROLLER_AS
         };
 
         return ddo;

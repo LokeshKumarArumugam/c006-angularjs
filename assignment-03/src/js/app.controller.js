@@ -36,7 +36,7 @@
         
         var $ctrl = this;
 
-        $ctrl.searchBtnName = "Narrow It Down For Me!";
+        $ctrl.searchButtonName = "Narrow It Down For Me!";
 
         $ctrl.searchString = "";
         $ctrl.filteredMenu = [ ];

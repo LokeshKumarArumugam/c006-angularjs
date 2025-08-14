@@ -1,8 +1,8 @@
 @charset "ISO-8859-1";
 
-/* home-view-div */
+/* home-view-division */
 
-.home-view-div {
+.home-view-division {
     margin-top: 7.5em;
     margin-bottom: 10em;
 }
@@ -20,7 +20,7 @@
 
 /* home view nav */
 
-.home-view-nav {
+.home-view-navigation {
     margin-top: 1.5em;
     font-weight: bold;
     border-bottom: solid 2px darkgray;

@@ -9,29 +9,29 @@
     .directive("lkaFooterLinks", FooterLinksComponent);
 
     FooterLinksComponent.$inject = [
-        "_DIR_REST_ELEM", 
-        "_DIR_REPLACE_FALSE",
-        "_DIR_EMPTY_ISOLATED_SCOPE",
+        "_DIRECTIVE_RESTRICT_ELEMENT", 
+        "_DIRECTIVE_REPLACE_FALSE",
+        "_DIRECTIVE_EMPTY_ISOLATED_SCOPE",
         "_FOOTER_LINKS_TEMPLATE_URL", 
-        "_FOOTER_LINKS_CTRL_NAME", 
-        "_FOOTER_LINKS_CTRL_AS"
+        "_FOOTER_LINKS_CONTROLLER_NAME", 
+        "_FOOTER_LINKS_CONTROLLER_AS"
     ];
     function FooterLinksComponent(
-        _DIR_REST_ELEM, 
-        _DIR_REPLACE_FALSE,
-        _DIR_EMPTY_ISOLATED_SCOPE, 
+        _DIRECTIVE_RESTRICT_ELEMENT, 
+        _DIRECTIVE_REPLACE_FALSE,
+        _DIRECTIVE_EMPTY_ISOLATED_SCOPE, 
         _FOOTER_LINKS_TEMPLATE_URL, 
-        _FOOTER_LINKS_CTRL_NAME, 
-        _FOOTER_LINKS_CTRL_AS
+        _FOOTER_LINKS_CONTROLLER_NAME, 
+        _FOOTER_LINKS_CONTROLLER_AS
     ) {
 
         var ddo = { 
-            restrict: _DIR_REST_ELEM,
-            replace: _DIR_REPLACE_FALSE,
-            scope: _DIR_EMPTY_ISOLATED_SCOPE, 
+            restrict: _DIRECTIVE_RESTRICT_ELEMENT,
+            replace: _DIRECTIVE_REPLACE_FALSE,
+            scope: _DIRECTIVE_EMPTY_ISOLATED_SCOPE, 
             templateUrl: _FOOTER_LINKS_TEMPLATE_URL, 
-            controller: _FOOTER_LINKS_CTRL_NAME, 
-            controllerAs: _FOOTER_LINKS_CTRL_AS
+            controller: _FOOTER_LINKS_CONTROLLER_NAME, 
+            controllerAs: _FOOTER_LINKS_CONTROLLER_AS
         };
 
         return ddo;

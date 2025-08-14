@@ -23,7 +23,7 @@
         $ctrl.description = "Description";
         $ctrl.updates = "Updates";
 
-        $ctrl.removeItemBtnName = "Don't want this one!";
+        $ctrl.removeItemButtonName = "Don't want this one!";
         $ctrl.emptyGone = "Nothing found";
 
         $ctrl.isEmptyMenu = function() {

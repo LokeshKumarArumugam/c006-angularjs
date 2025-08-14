@@ -8,16 +8,16 @@
     angular.module("errorModule").controller("errorController", ErrorController);
 
     ErrorController.$inject = [
-        "_NOT_FOUND_IMG_SRC"
+        "_NOT_FOUND_IMAGE_SOURCE"
     ];
     function ErrorController( 
-        _NOT_FOUND_IMG_SRC
+        _NOT_FOUND_IMAGE_SOURCE
     ) {
          
         var $ctrl = this;
 
         // image links
-        $ctrl.notFoundImageSrc = _NOT_FOUND_IMG_SRC;
+        $ctrl.notFoundImageSource = _NOT_FOUND_IMAGE_SOURCE;
 
     };
 

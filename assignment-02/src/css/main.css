@@ -27,7 +27,7 @@ html, body {
 
 /* nav title */
 
-.nav-title {
+.navigation-title {
     padding: 10px;
     color: aqua;
     text-align: center;
@@ -35,7 +35,7 @@ html, body {
 
 /* shopping list-checker */
 
-.shopping-checker-div {
+.shopping-checker-division {
     margin: solid 0 auto;
     margin-top: 10em;
     text-align: center;
@@ -53,9 +53,9 @@ html, body {
     padding: 25px;
 }
 
-/* message div */
+/* message division */
 
-.message-div { 
+.message-division { 
     width: 100%;
     margin-top: 3em;
     margin-bottom: 3em;
@@ -90,7 +90,7 @@ html, body {
 
 @media (min-width: 1200px) {
 
-    .nav-title {
+    .navigation-title {
         padding: 10px;
     }
 
@@ -120,7 +120,7 @@ html, body {
 
 @media (min-width: 992px) and (max-width: 1199px) {
 
-    .nav-title {
+    .navigation-title {
         padding: 10px;
     }
 
@@ -150,7 +150,7 @@ html, body {
 
 @media (min-width: 768px) and (max-width: 991px) {
 
-    .nav-title {
+    .navigation-title {
         padding: 8px;
     }
 
@@ -180,7 +180,7 @@ html, body {
 
 @media (max-width: 767px) {
 
-    .nav-title {
+    .navigation-title {
         padding: 5px;
     }
 
@@ -210,7 +210,7 @@ html, body {
 
 @media (max-width: 479px) {
 
-    .nav-title {
+    .navigation-title {
         padding: 5px;
     }
 

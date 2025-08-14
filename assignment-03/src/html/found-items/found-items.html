@@ -1,6 +1,6 @@
-<div class="found-items-div">
-    <div class="fix-thead" ng-if="!itemsCtrl.isEmptyMenu();">
-        <table class="tbg-dark-cyan-middle-indigo-45">
+<div class="found-items-division">
+    <div class="fix-table-head" ng-if="!itemsCtrl.isEmptyMenu();">
+        <table class="table-gradient-dark-cyan-middle-indigo-45">
             <thead>
                 <tr>
                     <th>{{ itemsCtrl.serialNo }}</th>
@@ -25,13 +25,13 @@
                     <td>{{ item.price_large }}</td>
                     <td>{{ item.description }}</td>
                     <td>
-                        <button type="button" class="btn btn-danger tab-btn" ng-click="itemsCtrl.remove({ foundItemIndex: $index })">{{ itemsCtrl.removeItemBtnName }}</button>
+                        <button type="button" class="btn btn-danger tab-button" ng-click="itemsCtrl.remove({ foundItemIndex: $index })">{{ itemsCtrl.removeItemButtonName }}</button>
                     </td>
                 </tr>
             </table>
         </table>
     </div>
-    <div class="message-div">
+    <div class="message-division">
         <span class="alert alert-info warning-message" ng-if="itemsCtrl.isEmptyMenu();">{{ itemsCtrl.emptyGone }}</span>
     </div>
 </div>

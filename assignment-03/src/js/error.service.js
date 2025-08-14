@@ -11,7 +11,7 @@
         return {
 
             // creates a new error context
-            create: function(method, args) {
+            create: function(method, argumentArray) {
 
                 var result = {
 
@@ -57,35 +57,35 @@
                         // formats function argument details into a text string
                         formatArguments: function() {
 
-                            var params = "";
-                            if(!this.details.args) {
-                                return params;
+                            var parameters = "";
+                            if(!this.details.argumentArray) {
+                                return parameters;
                             }
                             
-                            var length = this.details.args.length;
+                            var length = this.details.argumentArray.length;
                             for(var i = 0; i < length; i++) {
-                                var p = this.details.args[i];
+                                var p = this.details.argumentArray[i];
 
                                 if(p === undefined) {
-                                    params += "undefined";
+                                    parameters += "undefined";
                                 } else {
                                     if(p === null) {
-                                        params += "null";
+                                        parameters += "null";
                                     } else {
                                         if(typeof(p) == "object") {
-                                            params += "Object";
+                                            parameters += "Object";
                                         } else {
-                                            params += p;
+                                            parameters += p;
                                         }
                                     }
                                 }
 
                                 if(i != (length - 1)) {
-                                    params += ",";
+                                    parameters += ",";
                                 }
                             }
 
-                            return params;
+                            return parameters;
 
                         }
                     }
@@ -94,8 +94,8 @@
                 if(method){
                     result.errorContext.details.method = method;
                 }
-                if(args){
-                    result.errorContext.details.args = args;
+                if(argumentArray){
+                    result.errorContext.details.argumentArray = argumentArray;
                 }
 
                 return result;

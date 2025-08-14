@@ -9,22 +9,22 @@
     .directive("lkaHeader", HeaderComponent);
 
     HeaderComponent.$inject = [
-        "_DIR_REST_ELEM", 
-        "_DIR_REPLACE_FALSE",
-        "_DIR_EMPTY_ISOLATED_SCOPE", 
+        "_DIRECTIVE_RESTRICT_ELEMENT", 
+        "_DIRECTIVE_REPLACE_FALSE",
+        "_DIRECTIVE_EMPTY_ISOLATED_SCOPE", 
         "_HEADER_TEMPLATE_URL"
     ];
     function HeaderComponent(
-        _DIR_REST_ELEM, 
-        _DIR_REPLACE_FALSE,
-        _DIR_EMPTY_ISOLATED_SCOPE, 
+        _DIRECTIVE_RESTRICT_ELEMENT, 
+        _DIRECTIVE_REPLACE_FALSE,
+        _DIRECTIVE_EMPTY_ISOLATED_SCOPE, 
         _HEADER_TEMPLATE_URL
     ) {
 
         var ddo = { 
-            restrict: _DIR_REST_ELEM,
-            replace: _DIR_REPLACE_FALSE,
-            scope: _DIR_EMPTY_ISOLATED_SCOPE, 
+            restrict: _DIRECTIVE_RESTRICT_ELEMENT,
+            replace: _DIRECTIVE_REPLACE_FALSE,
+            scope: _DIRECTIVE_EMPTY_ISOLATED_SCOPE, 
             templateUrl: _HEADER_TEMPLATE_URL
         };
 

@@ -25,7 +25,7 @@
     /* our service */
     // common
     // constant
-    const SPINNER_IMAGE_SOURCE = "img/spinner.svg";
+    const SPINNER_IMAGE_SOURCE = "image/spinner.svg";
     // controller
     // service
     // factory
@@ -45,7 +45,7 @@
     // location
     // route
     // element
-    const LOADING_SPINNER_ACTIVATE_EVT = "spinner:activate";
+    const LOADING_SPINNER_ACTIVATE_EVENT = "spinner:activate";
 
 
 
@@ -65,7 +65,7 @@
     /* our service */
     // common
     // constant 
-    .constant("_SPINNER_IMG_SRC", SPINNER_IMAGE_SOURCE)
+    .constant("_SPINNER_IMAGE_SOURCE", SPINNER_IMAGE_SOURCE)
     // controller
     // service
     // factory
@@ -85,7 +85,7 @@
     // location
     // route
     // element
-    .constant("_LOADING_SPINNER_ACT_EVT", LOADING_SPINNER_ACTIVATE_EVT)
+    .constant("_LOADING_SPINNER_ACTIVATE_EVENT", LOADING_SPINNER_ACTIVATE_EVENT)
 
     /* ========================== end ========================== */
     ;

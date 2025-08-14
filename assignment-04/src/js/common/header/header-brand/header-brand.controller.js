@@ -9,11 +9,11 @@
 
     HeaderBrandController.$inject = [
         "_HOME_ROOT_URL", 
-        "_BRAND_IMG_SRC"
+        "_BRAND_IMAGE_SOURCE"
     ];
     function HeaderBrandController(
         _HOME_ROOT_URL, 
-        _BRAND_IMG_SRC
+        _BRAND_IMAGE_SOURCE
     ) {
          
         var $ctrl = this;
@@ -21,7 +21,7 @@
         // brand links
         $ctrl.appUrl = _HOME_ROOT_URL;
         // image links
-        $ctrl.brandImageSrc = _BRAND_IMG_SRC;
+        $ctrl.brandImageSource = _BRAND_IMAGE_SOURCE;
 
     };
 

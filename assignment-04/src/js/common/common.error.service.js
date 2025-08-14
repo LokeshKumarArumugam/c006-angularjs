@@ -13,7 +13,7 @@
         return {
 
             // creates a new error context
-            create: function(method, args) {
+            create: function(method, argumentArray) {
 
                 var result = {
 
@@ -52,9 +52,9 @@
 
                             if(errorContext.details.caller) {
                                 var text = errorContext.details.caller.format();
-                                text += "\n\tat: " + errorContext.details.method.__proto__.constructor.name + "(" + errorContext.formatArguments() + ")";
+                                text += "\n\tat: " + errorContext.details.method + "(" + errorContext.formatArguments() + ")";
                             } else if(errorContext.details.method) {
-                                text += "Error calling " + errorContext.details.method.__proto__.constructor.name + "(" + errorContext.formatArguments() + "): " + errorContext.details.message;
+                                text += "Error calling " + errorContext.details.method + "(" + errorContext.formatArguments() + "): " + errorContext.details.message;
                             } else {
                                 text += errorContext.details.message;
                             }
@@ -66,35 +66,35 @@
                         formatArguments: function() {
 
                             var errorContext = this;
-                            var params = "";
-                            if(!errorContext.details.args) {
-                                return params;
+                            var parameters = "";
+                            if(!errorContext.details.arguments) {
+                                return parameters;
                             }
                             
-                            var length = errorContext.details.args.length;
+                            var length = errorContext.details.arguments.length;
                             for(var i = 0; i < length; i++) {
-                                var p = errorContext.details.args[i];
+                                var p = errorContext.details.arguments[i];
 
                                 if(p === undefined) {
-                                    params += "undefined";
+                                    parameters += "undefined";
                                 } else {
                                     if(p === null) {
-                                        params += "null";
+                                        parameters += "null";
                                     } else {
                                         if(typeof(p) === "object") {
-                                            params += "Object";
+                                            parameters += "Object";
                                         } else {
-                                            params += p;
+                                            parameters += p;
                                         }
                                     }
                                 }
 
                                 if(i !== (length - 1)) {
-                                    params += ", ";
+                                    parameters += ", ";
                                 }
                             }
 
-                            return params;
+                            return parameters;
 
                         }
                     }
@@ -103,8 +103,8 @@
                 if(method){
                     result.errorContext.details.method = method;
                 }
-                if(args){
-                    result.errorContext.details.args = args;
+                if(argumentArray){
+                    result.errorContext.details.arguments = argumentArray;
                 }
 
                 return result;

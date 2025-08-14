@@ -1,8 +1,8 @@
 @charset "ISO-8859-1";
 
-/* menu categories div */
+/* menu categories division */
 
-.menu-categories-div {
+.menu-categories-division {
     margin-top: 3em;
     margin-bottom: 3em;
     font-size: 15px;
@@ -20,7 +20,7 @@
 
 @media (min-width: 1200px) {
 
-    .menu-categories-div {
+    .menu-categories-division {
         font-size: 15px;
     }
 
@@ -30,7 +30,7 @@
 
 @media (min-width: 992px) and (max-width: 1199px) {
 
-    .menu-categories-div {
+    .menu-categories-division {
         font-size: 15px;
     }
 
@@ -40,7 +40,7 @@
 
 @media (min-width: 768px) and (max-width: 991px) {
 
-    .menu-categories-div {
+    .menu-categories-division {
         font-size: 12px;
     }
 
@@ -50,7 +50,7 @@
 
 @media (max-width: 767px) {
 
-    .menu-categories-div {
+    .menu-categories-division {
         font-size: 12px;
     }
 
@@ -60,7 +60,7 @@
 
 @media (max-width: 479px) {
 
-    .menu-categories-div {
+    .menu-categories-division {
         font-size: 8px;
     }
 

@@ -13,12 +13,12 @@
         var $ctrl = this;
 
         // local navigation
-        $ctrl.nav = {};
-        $ctrl.nav.home = "Home";
-        $ctrl.nav.menu = "Menu";
-        $ctrl.nav.categories = "Categories";
-        $ctrl.nav.items = "Items";
-        $ctrl.nav.item = "Item";
+        $ctrl.navigation = {};
+        $ctrl.navigation.home = "Home";
+        $ctrl.navigation.menu = "Menu";
+        $ctrl.navigation.categories = "Categories";
+        $ctrl.navigation.items = "Items";
+        $ctrl.navigation.item = "Item";
 
     };
 

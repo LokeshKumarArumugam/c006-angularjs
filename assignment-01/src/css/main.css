@@ -27,18 +27,18 @@ html, body {
 
 /* background */
 
-.bg {
+.background {
     max-width: 100%;
     min-height: 100%;
     background-position: center;
-    background-image: url("../../img/cool-background.png");
+    background-image: url("../../image/cool-background.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 /* lunch-checker */
 
-.lunch-checker-div {
+.lunch-checker-division {
     margin: solid 0 auto;
     text-align: center;
 }
@@ -245,8 +245,8 @@ html, body {
 
 @media only screen and (orientation: portrait) {
     
-    .bg {
-        background-image: url("../../img/cool-background-tilted.png");
+    .background {
+        background-image: url("../../image/cool-background-tilted.png");
     }
 
 }

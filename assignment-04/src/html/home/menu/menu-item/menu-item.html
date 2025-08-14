@@ -1,19 +1,19 @@
 <div class="container-1 menu-view-form">
-    <div class="home-view-nav">
-        <a ui-sref="home"> {{ ::homeCtrl.nav.home }} &lt; {{ ::homeCtrl.nav.menu }}</a> &lt; 
-        <a ui-sref="home.categories">{{ ::homeCtrl.nav.categories }}</a> &lt; 
-        <a ui-sref="home.items">{{ ::homeCtrl.nav.items }}</a> &lt; 
-        <span>{{ ::homeCtrl.nav.item }}</span>
+    <div class="home-view-navigation">
+        <a ui-sref="home"> {{ ::homeCtrl.navigation.home }} &lt; {{ ::homeCtrl.navigation.menu }}</a> &lt; 
+        <a ui-sref="home.categories">{{ ::homeCtrl.navigation.categories }}</a> &lt; 
+        <a ui-sref="home.items">{{ ::homeCtrl.navigation.items }}</a> &lt; 
+        <span>{{ ::homeCtrl.navigation.item }}</span>
     </div>
 
-    <div class="form-group search-form-div">
+    <div class="form-group search-form-division">
         <input type="text" placeholder="Search Item By Short Name" class="search-form-input" ng-model="itemCtrl.searchShortName">
-        <button type="button" class="btn btn-primary tab-btn" ng-click="itemCtrl.searchMenuItem(itemCtrl.searchShortName);">{{ ::itemCtrl.searchBtnName }}</button>
+        <button type="button" class="btn btn-primary tab-button" ng-click="itemCtrl.searchMenuItem(itemCtrl.searchShortName);">{{ ::itemCtrl.searchButtonName }}</button>
     </div>
 
-    <div class="menu-item-div">
-        <div class="fix-thead" ng-if="!itemCtrl.isEmptyMenuItem();">
-            <table class="tbg-dark-cyan-middle-indigo-45">
+    <div class="menu-item-division">
+        <div class="fix-table-head" ng-if="!itemCtrl.isEmptyMenuItem();">
+            <table class="table-gradient-dark-cyan-middle-indigo-45">
                 <thead>
                     <tr>
                         <th>{{ ::itemCtrl.itemName }}</th>
@@ -38,7 +38,7 @@
                 </table>
             </table>
         </div>
-        <div class="message-div">
+        <div class="message-division">
             <span class="alert alert-info warning-message" ng-if="itemCtrl.isEmptyMenuItem();">{{ ::itemCtrl.emptyGone }}</span>
         </div>
     </div>

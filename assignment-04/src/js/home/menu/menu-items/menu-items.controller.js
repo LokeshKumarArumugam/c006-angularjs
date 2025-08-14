@@ -28,7 +28,7 @@
         $ctrl.description = "Description";
 
         $ctrl.emptyGone = "No Items found for the Menu Category!";
-        $ctrl.searchBtnName = "Search";
+        $ctrl.searchButtonName = "Search";
         $ctrl.searchCategory = $stateParams.categoryShortName;
 
         $ctrl.items = (items === null) ? [ ] : items.menu_items ;

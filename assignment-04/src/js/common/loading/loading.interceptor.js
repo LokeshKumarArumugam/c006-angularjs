@@ -10,31 +10,31 @@
     LoadingHttpInterceptor.$inject = [ 
         "$rootScope", 
         "$q", 
-        "_LOADING_SPINNER_ACT_EVT"
+        "_LOADING_SPINNER_ACTIVATE_EVENT"
     ];
     function LoadingHttpInterceptor(
         $rootScope, 
         $q, 
-        _LOADING_SPINNER_ACT_EVT
+        _LOADING_SPINNER_ACTIVATE_EVENT
     ) {
 
         var loadingCount = 0;
 
         var ddo = {
 
-            request: function(config) {
+            request: function(configuration) {
                 loadingCount++;
                 if(loadingCount === 1) {
-                    $rootScope.$broadcast(_LOADING_SPINNER_ACT_EVT, { on: true });
+                    $rootScope.$broadcast(_LOADING_SPINNER_ACTIVATE_EVENT, { on: true });
                 }
         
-                return config;
+                return configuration;
             },
         
             response: function(response) {
                 loadingCount--;
                 if(loadingCount === 0) {
-                    $rootScope.$broadcast(_LOADING_SPINNER_ACT_EVT, { on: false });
+                    $rootScope.$broadcast(_LOADING_SPINNER_ACTIVATE_EVENT, { on: false });
                 }
 
                 return response;
@@ -43,7 +43,7 @@
             responseError: function(response) {
                 loadingCount--;
                 if(loadingCount === 0) {
-                    $rootScope.$broadcast(_LOADING_SPINNER_ACT_EVT, { on: false });
+                    $rootScope.$broadcast(_LOADING_SPINNER_ACTIVATE_EVENT, { on: false });
                 }
         
                 return $q.reject(response);

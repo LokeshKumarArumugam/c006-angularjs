@@ -1,19 +1,19 @@
 <ui-view>
     <div class="container-1 menu-view-form">
-        <div class="home-view-nav">
-            <a ui-sref="home"> {{ ::homeCtrl.nav.home }} &lt; {{ ::homeCtrl.nav.menu }}</a> &lt; 
-            <a ui-sref="home.categories">{{ ::homeCtrl.nav.categories }}</a> &lt; 
-            <span>{{ ::homeCtrl.nav.items }}</span>
+        <div class="home-view-navigation">
+            <a ui-sref="home"> {{ ::homeCtrl.navigation.home }} &lt; {{ ::homeCtrl.navigation.menu }}</a> &lt; 
+            <a ui-sref="home.categories">{{ ::homeCtrl.navigation.categories }}</a> &lt; 
+            <span>{{ ::homeCtrl.navigation.items }}</span>
         </div>
     
-        <div class="form-group search-form-div">
+        <div class="form-group search-form-division">
             <input type="text" placeholder="Search Items By Category" class="search-form-input" ng-model="itemsCtrl.searchCategory">
-            <button type="button" class="btn btn-primary tab-btn" ng-click="itemsCtrl.searchMenuItems(itemsCtrl.searchCategory);">{{ ::itemsCtrl.searchBtnName }}</button>
+            <button type="button" class="btn btn-primary tab-button" ng-click="itemsCtrl.searchMenuItems(itemsCtrl.searchCategory);">{{ ::itemsCtrl.searchButtonName }}</button>
         </div>
     
-        <div class="menu-items-div">
-            <div class="fix-thead" ng-if="!itemsCtrl.isEmptyMenuItems();">
-                <table class="tbg-dark-cyan-middle-indigo-45">
+        <div class="menu-items-division">
+            <div class="fix-table-head" ng-if="!itemsCtrl.isEmptyMenuItems();">
+                <table class="table-gradient-dark-cyan-middle-indigo-45">
                     <thead>
                         <tr>
                             <th>{{ ::itemsCtrl.serialNo }}</th>
@@ -40,7 +40,7 @@
                     </table>
                 </table>
             </div>
-            <div class="message-div">
+            <div class="message-division">
                 <span class="alert alert-info warning-message" ng-if="itemsCtrl.isEmptyMenuItems();">{{ ::itemsCtrl.emptyGone }}</span>
             </div>
         </div>

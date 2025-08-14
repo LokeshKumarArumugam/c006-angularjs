@@ -6,38 +6,38 @@
     "use strict";
 
     angular.module("restaurantAppModule")
-    .directive("lkaNavActiveLink", navActiveLinkDirective);                               
+    .directive("lkaNavigationActiveLink", navigationActiveLinkDirective);                               
 
-    var srefEquals = function(sref, href, paramStart, slash) {
+    var stateReferenceEquals = function(stateReference, hypertextReference, parameterStart, slash) {
         var equals = true;
 
-        sref = sref || "";
-        href = href || "";
+        stateReference = stateReference || "";
+        hypertextReference = hypertextReference || "";
 
-        var srPaths = sref.split(slash);
-        var hrPaths = href.split(slash);
-        var srplen = srPaths.length;
-        var hrplen = hrPaths.length;
+        var statePaths = stateReference.split(slash);
+        var hypertextPaths = hypertextReference.split(slash);
+        var stateLength = statePaths.length;
+        var hypertextLength = hypertextPaths.length;
 
-        equals = srplen === hrplen;
+        equals = stateLength === hypertextLength;
 
         if(equals) {
-            var srs;
-            var hrs;
-            var srslen;
-            var hrslen;
+            var currentState;
+            var currentHypertext;
+            var currentStateLength;
+            var currentHypertextLength;
             var isParameter;
 
-            for(var i = 0; i < srplen; i++) {
-                srs = srPaths[i];
-                hrs = hrPaths[i];
-                srslen = srs.length;
-                hrslen = hrs.length;
-                isParameter = srs[0] === paramStart;
+            for(var i = 0; i < stateLength; i++) {
+                currentState = statePaths[i];
+                currentHypertext = hypertextPaths[i];
+                currentStateLength = currentState.length;
+                currentHypertextLength = currentHypertext.length;
+                isParameter = currentState[0] === parameterStart;
 
-                if(srslen === hrslen) {
-                    for(var j = 0; j < srslen; j++) {
-                        if(srs[j] !== hrs[j] && !isParameter) {
+                if(currentStateLength === currentHypertextLength) {
+                    for(var j = 0; j < currentStateLength; j++) {
+                        if(currentState[j] !== currentHypertext[j] && !isParameter) {
                             equals = false;
                             break;
                         }
@@ -52,61 +52,61 @@
         return equals;
     };
 
-    navActiveLinkDirective.$inject = [
+    navigationActiveLinkDirective.$inject = [
         "$state", 
-        "_DIR_REST_ATTR", 
-        "_DIR_REPLACE_FALSE", 
-        "_DIR_EMPTY_ISOLATED_SCOPE", 
+        "_DIRECTIVE_RESTRICT_ATTRIBUTE", 
+        "_DIRECTIVE_REPLACE_FALSE", 
+        "_DIRECTIVE_EMPTY_ISOLATED_SCOPE", 
         "_SLASH",
         "_BASE_HASH_PATH", 
         "_HASH_PATH", 
-        "_PARAM_START", 
-        "_PARAM_END", 
+        "_PARAMETER_START", 
+        "_PARAMETER_END", 
         "_ANCHOR_TAG", 
-        "_HREF_ATTR", 
+        "_HREF_ATTRIBUTE", 
         "_ACTIVE_CSS_CLASS", 
-        "_STATE_CHG_SUC_EVT"
+        "_STATE_CHANGE_SUCCESS_EVENT"
     ];
-    function navActiveLinkDirective(
+    function navigationActiveLinkDirective(
         $state, 
-        _DIR_REST_ATTR, 
-        _DIR_REPLACE_FALSE, 
-        _DIR_EMPTY_ISOLATED_SCOPE, 
+        _DIRECTIVE_RESTRICT_ATTRIBUTE, 
+        _DIRECTIVE_REPLACE_FALSE, 
+        _DIRECTIVE_EMPTY_ISOLATED_SCOPE, 
         _SLASH, 
         _BASE_HASH_PATH, 
         _HASH_PATH,  
-        _PARAM_START, 
-        _PARAM_END, 
+        _PARAMETER_START, 
+        _PARAMETER_END, 
         _ANCHOR_TAG, 
-        _HREF_ATTR, 
+        _HREF_ATTRIBUTE, 
         _ACTIVE_CSS_CLASS, 
-        _STATE_CHG_SUC_EVT
+        _STATE_CHANGE_SUCCESS_EVENT
     ) {
         
         var ddo = {
 
-            restrict: _DIR_REST_ATTR,
-            replace: _DIR_REPLACE_FALSE,
-            scope: _DIR_EMPTY_ISOLATED_SCOPE, 
-            link: function(scope, element, attrs, controller) {
+            restrict: _DIRECTIVE_RESTRICT_ATTRIBUTE,
+            replace: _DIRECTIVE_REPLACE_FALSE,
+            scope: _DIRECTIVE_EMPTY_ISOLATED_SCOPE, 
+            link: function(scope, element, attributes, controller) {
 
-                scope.$on(_STATE_CHG_SUC_EVT, function(event, data) {
+                scope.$on(_STATE_CHANGE_SUCCESS_EVENT, function(event, data) {
                     
-                    var sref = new String($state.$current.url.sourcePath);
+                    var stateReference = new String($state.$current.url.sourcePath);
                     var anchors = element.find(_ANCHOR_TAG);
-                    sref = _BASE_HASH_PATH.concat(sref);
+                    stateReference = _BASE_HASH_PATH.concat(stateReference);
 
                     angular.forEach(anchors, function(anchor) {
 
                         var a = angular.element(anchor);
-                        var navItem = a.parent();
-                        var href = a.attr(_HREF_ATTR);
-                        var equals = srefEquals(sref, href, _PARAM_START, _SLASH);
+                        var navigationItem = a.parent();
+                        var hypertextReference = a.attr(_HREF_ATTRIBUTE);
+                        var equals = stateReferenceEquals(stateReference, hypertextReference, _PARAMETER_START, _SLASH);
 
                         if(equals) {
-                            navItem.addClass(_ACTIVE_CSS_CLASS);
+                            navigationItem.addClass(_ACTIVE_CSS_CLASS);
                         } else {
-                            navItem.removeClass(_ACTIVE_CSS_CLASS);
+                            navigationItem.removeClass(_ACTIVE_CSS_CLASS);
                         };
 
                     });

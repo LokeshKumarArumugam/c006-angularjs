@@ -26,7 +26,7 @@
 
 /* table fix header (thead) */
 
-.fix-thead {
+.fix-table-head {
 	overflow-x: auto;
 	overflow-y: auto;
 	width: auto;
@@ -37,33 +37,33 @@
 	box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.25);
 	border-radius: 15px;
 }
-.fix-thead table {
+.fix-table-head table {
 	width: 100%;
 	height: 100%;
 }
-.fix-thead thead {
+.fix-table-head thead {
 	position: sticky;
 	top: 0;
 	box-shadow: 0px 20px 20px 1px rgba(0, 0, 0, 0.3);
 }
 
-/* table gradient div */
+/* table gradient division */
 
-.tbg-div-pad-10 {
+.table-gradient-division-pad-10 {
     padding: 10px;
 }
 
-.tbg-div-pad-15 {
+.table-gradient-division-pad-15 {
     padding: 15px;
 }
 
-.tbg-div-pad-20 {
+.table-gradient-division-pad-20 {
     padding: 20px;
 }
 
 /* antique-white to dark-orange gradient 45 deg */
 
-.tbg-antique-white-dark-orange-45 {
+.table-gradient-antique-white-dark-orange-45 {
     margin: auto;
     /* linear-gradient() function can only be applied to the background tag */
     background: linear-gradient(45deg, antiquewhite, darkorange);
@@ -72,39 +72,39 @@
 	box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.25);
 	text-align: center;
 }
-.tbg-antique-white-dark-orange-45 thead th, .tbg-antique-white-dark-orange-45 tbody td {
+.table-gradient-antique-white-dark-orange-45 thead th, .table-gradient-antique-white-dark-orange-45 tbody td {
 	padding: 15px;
     color: black;
     border: solid 1px cornflowerblue;
 }
-.tbg-antique-white-dark-orange-45 thead th {
+.table-gradient-antique-white-dark-orange-45 thead th {
     color: burlywood;
     background-color: maroon;
 	font-weight: bold;
 	text-align: center;
 }
-.tbg-antique-white-dark-orange-45 thead tr:first-child th {
+.table-gradient-antique-white-dark-orange-45 thead tr:first-child th {
 	border-top: none;
 }
-.tbg-antique-white-dark-orange-45 tbody tr:last-child td {
+.table-gradient-antique-white-dark-orange-45 tbody tr:last-child td {
 	border-bottom: none;
 }
-.tbg-antique-white-dark-orange-45 thead tr th:first-child {
+.table-gradient-antique-white-dark-orange-45 thead tr th:first-child {
 	border-left: none;
 }
-.tbg-antique-white-dark-orange-45 tbody tr td:first-child {
+.table-gradient-antique-white-dark-orange-45 tbody tr td:first-child {
 	border-left: none;
 }
-.tbg-antique-white-dark-orange-45 thead tr th:last-child {
+.table-gradient-antique-white-dark-orange-45 thead tr th:last-child {
 	border-right: none;
 }
-.tbg-antique-white-dark-orange-45 tbody tr td:last-child {
+.table-gradient-antique-white-dark-orange-45 tbody tr td:last-child {
 	border-right: none;
 }
 
 /* dark-cyan to middle-indigo 45-deg */
 
-.tbg-dark-cyan-middle-indigo-45 {
+.table-gradient-dark-cyan-middle-indigo-45 {
     margin: auto;
     background: linear-gradient(45deg, darkcyan, #5f2c82);
 	border-collapse: collapse;
@@ -112,32 +112,32 @@
 	box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.25);
 	text-align: center;
 }
-.tbg-dark-cyan-middle-indigo-45 thead th, .tbg-dark-cyan-middle-indigo-45 tbody td {
+.table-gradient-dark-cyan-middle-indigo-45 thead th, .table-gradient-dark-cyan-middle-indigo-45 tbody td {
 	padding: 15px;
     color: wheat;
     border: solid 1px wheat;
 }
-.tbg-dark-cyan-middle-indigo-45 thead th {
+.table-gradient-dark-cyan-middle-indigo-45 thead th {
     color: wheat;
     background-color: indigo;
 	font-weight: bold;
 	text-align: center;
 }
-.tbg-dark-cyan-middle-indigo-45 thead tr:first-child th {
+.table-gradient-dark-cyan-middle-indigo-45 thead tr:first-child th {
 	border-top: none;
 }
-.tbg-dark-cyan-middle-indigo-45 tbody tr:last-child td {
+.table-gradient-dark-cyan-middle-indigo-45 tbody tr:last-child td {
 	border-bottom: none;
 }
-.tbg-dark-cyan-middle-indigo-45 thead tr th:first-child {
+.table-gradient-dark-cyan-middle-indigo-45 thead tr th:first-child {
 	border-left: none;
 }
-.tbg-dark-cyan-middle-indigo-45 tbody tr td:first-child {
+.table-gradient-dark-cyan-middle-indigo-45 tbody tr td:first-child {
 	border-left: none;
 }
-.tbg-dark-cyan-middle-indigo-45 thead tr th:last-child {
+.table-gradient-dark-cyan-middle-indigo-45 thead tr th:last-child {
 	border-right: none;
 }
-.tbg-dark-cyan-middle-indigo-45 tbody tr td:last-child {
+.table-gradient-dark-cyan-middle-indigo-45 tbody tr td:last-child {
 	border-right: none;
 }

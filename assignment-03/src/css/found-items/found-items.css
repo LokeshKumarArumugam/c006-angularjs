@@ -1,8 +1,8 @@
 @charset "ISO-8859-1";
 
-/* found items div */
+/* found items division */
 
-.found-items-div {
+.found-items-division {
     margin-top: 3em;
     margin-bottom: 3em;
     font-size: 15px;
@@ -12,7 +12,7 @@
 
 @media (min-width: 1200px) {
 
-    .found-items-div {
+    .found-items-division {
         font-size: 15px;
     }
 
@@ -22,7 +22,7 @@
 
 @media (min-width: 992px) and (max-width: 1199px) {
 
-    .found-items-div {
+    .found-items-division {
         font-size: 15px;
     }
 
@@ -32,7 +32,7 @@
 
 @media (min-width: 768px) and (max-width: 991px) {
 
-    .found-items-div {
+    .found-items-division {
         font-size: 12px;
     }
 
@@ -42,7 +42,7 @@
 
 @media (max-width: 767px) {
 
-    .found-items-div {
+    .found-items-division {
         font-size: 12px;
     }
 
@@ -52,7 +52,7 @@
 
 @media (max-width: 479px) {
 
-    .found-items-div {
+    .found-items-division {
         font-size: 8px;
     }
 

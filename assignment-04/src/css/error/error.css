@@ -1,17 +1,17 @@
 @charset "ISO-8859-1";
 
-/* error-view-div */
+/* error-view-division */
 
-.error-view-div {
+.error-view-division {
     margin-top: 7.5em;
     margin-bottom: 10em;
 }
 
-.error-view-div .error-messages-div {
+.error-view-division .error-messages-division {
     margin-bottom: 5em;
 }
 
-.error-view-div #error-img {
+.error-view-division #error-image {
     padding-left: 5%;
     max-width: 100%;
     max-height: 100%;

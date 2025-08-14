@@ -1,1 +1,5 @@
 assignment-01: https://lokeshkumararumugam.github.io/c006-angularjs/assignment-01/#!/
+assignment-02: https://lokeshkumararumugam.github.io/c006-angularjs/assignment-02/#!/
+assignment-03: https://lokeshkumararumugam.github.io/c006-angularjs/assignment-03/#!/
+assignment-04: https://lokeshkumararumugam.github.io/c006-angularjs/assignment-04/#!/
+assignment-05: https://lokeshkumararumugam.github.io/c006-angularjs/assignment-05/#!/

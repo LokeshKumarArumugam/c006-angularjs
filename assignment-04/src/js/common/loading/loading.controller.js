@@ -9,18 +9,18 @@
 
     LoadingController.$inject = [
         "$rootScope", 
-        "_SPINNER_IMG_SRC", 
-        "_LOADING_SPINNER_ACT_EVT"
+        "_SPINNER_IMAGE_SOURCE", 
+        "_LOADING_SPINNER_ACTIVATE_EVENT"
     ];
-    function LoadingController($rootScope, _SPINNER_IMG_SRC, _LOADING_SPINNER_ACT_EVT) {
+    function LoadingController($rootScope, _SPINNER_IMAGE_SOURCE, _LOADING_SPINNER_ACTIVATE_EVENT) {
 
         var $ctrl = this;
         var listener;
 
         $ctrl.$onInit = function() {
             $ctrl.show = false;
-            $ctrl.spinnerImageSrc = _SPINNER_IMG_SRC;
-            listener = $rootScope.$on(_LOADING_SPINNER_ACT_EVT, onSpinnerActivate);
+            $ctrl.spinnerImageSource = _SPINNER_IMAGE_SOURCE;
+            listener = $rootScope.$on(_LOADING_SPINNER_ACTIVATE_EVENT, onSpinnerActivate);
         };
       
         $ctrl.$onDestroy = function() {

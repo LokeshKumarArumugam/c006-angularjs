@@ -5,13 +5,13 @@
     
     "use strict";
 
-    angular.module("commonModule").config(interceptorsConfig);
+    angular.module("commonModule").config(interceptorsConfiguration);
 
-    interceptorsConfig.$inject = [
+    interceptorsConfiguration.$inject = [
         "$httpProvider", 
         "_LOADING_INTERCEPTOR_NAME"
     ];
-    function interceptorsConfig(
+    function interceptorsConfiguration(
         $httpProvider, 
         _LOADING_INTERCEPTOR_NAME
     ) {

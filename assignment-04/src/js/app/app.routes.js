@@ -5,79 +5,79 @@
 
     "use strict";
 
-    angular.module("restaurantAppModule").config(routeConfig);
+    angular.module("restaurantAppModule").config(routeConfiguration);
     
-    routeConfig.$inject = [ 
+    routeConfiguration.$inject = [ 
         "$locationProvider", 
         "$stateProvider", 
         "$urlRouterProvider", 
         "_HOME_STATE_NAME", 
         "_HOME_URL", 
         "_HOME_TEMPLATE_URL", 
-        "_HOME_CTRL_NAME", 
-        "_HOME_CTRL_AS", 
+        "_HOME_CONTROLLER_NAME", 
+        "_HOME_CONTROLLER_AS", 
         "_MENU_CATEGORIES_STATE_NAME", 
         "_MENU_CATEGORIES_URL", 
         "_MENU_CATEGORIES_TEMPLATE_URL", 
-        "_MENU_CATEGORIES_CTRL_NAME", 
-        "_MENU_CATEGORIES_CTRL_AS", 
+        "_MENU_CATEGORIES_CONTROLLER_NAME", 
+        "_MENU_CATEGORIES_CONTROLLER_AS", 
         "_MENU_ITEMS_STATE_NAME", 
         "_MENU_ITEMS_URL", 
         "_MENU_ITEMS_TEMPLATE_URL", 
-        "_MENU_ITEMS_CTRL_NAME", 
-        "_MENU_ITEMS_CTRL_AS", 
+        "_MENU_ITEMS_CONTROLLER_NAME", 
+        "_MENU_ITEMS_CONTROLLER_AS", 
         "_MENU_ITEM_STATE_NAME",  
         "_MENU_ITEM_URL", 
         "_MENU_ITEM_TEMPLATE_URL", 
-        "_MENU_ITEM_CTRL_NAME", 
-        "_MENU_ITEM_CTRL_AS", 
+        "_MENU_ITEM_CONTROLLER_NAME", 
+        "_MENU_ITEM_CONTROLLER_AS", 
         "_ABOUT_STATE_NAME",  
         "_ABOUT_URL", 
         "_ABOUT_TEMPLATE_URL", 
-        "_ABOUT_CTRL_NAME", 
-        "_ABOUT_CTRL_AS", 
+        "_ABOUT_CONTROLLER_NAME", 
+        "_ABOUT_CONTROLLER_AS", 
         "_ERROR_STATE_NAME", 
         "_ERROR_URL", 
         "_ERROR_TEMPLATE_URL", 
-        "_ERROR_CTRL_NAME", 
-        "_ERROR_CTRL_AS", 
+        "_ERROR_CONTROLLER_NAME", 
+        "_ERROR_CONTROLLER_AS", 
         "_HTML5_ENABLED", 
         "_HASH_PREFIX"
     ];
-    function routeConfig(
+    function routeConfiguration(
         $locationProvider, 
         $stateProvider, 
         $urlRouterProvider,
         _HOME_STATE_NAME, 
         _HOME_URL, 
         _HOME_TEMPLATE_URL, 
-        _HOME_CTRL_NAME, 
-        _HOME_CTRL_AS, 
+        _HOME_CONTROLLER_NAME, 
+        _HOME_CONTROLLER_AS, 
         _MENU_CATEGORIES_STATE_NAME, 
         _MENU_CATEGORIES_URL, 
         _MENU_CATEGORIES_TEMPLATE_URL, 
-        _MENU_CATEGORIES_CTRL_NAME, 
-        _MENU_CATEGORIES_CTRL_AS, 
+        _MENU_CATEGORIES_CONTROLLER_NAME, 
+        _MENU_CATEGORIES_CONTROLLER_AS, 
         _MENU_ITEMS_STATE_NAME, 
         _MENU_ITEMS_URL, 
         _MENU_ITEMS_TEMPLATE_URL, 
-        _MENU_ITEMS_CTRL_NAME, 
-        _MENU_ITEMS_CTRL_AS,
+        _MENU_ITEMS_CONTROLLER_NAME, 
+        _MENU_ITEMS_CONTROLLER_AS,
         _MENU_ITEM_STATE_NAME,  
         _MENU_ITEM_URL, 
         _MENU_ITEM_TEMPLATE_URL, 
-        _MENU_ITEM_CTRL_NAME, 
-        _MENU_ITEM_CTRL_AS, 
+        _MENU_ITEM_CONTROLLER_NAME, 
+        _MENU_ITEM_CONTROLLER_AS, 
         _ABOUT_STATE_NAME,  
         _ABOUT_URL, 
         _ABOUT_TEMPLATE_URL, 
-        _ABOUT_CTRL_NAME, 
-        _ABOUT_CTRL_AS,  
+        _ABOUT_CONTROLLER_NAME, 
+        _ABOUT_CONTROLLER_AS,  
         _ERROR_STATE_NAME, 
         _ERROR_URL, 
         _ERROR_TEMPLATE_URL, 
-        _ERROR_CTRL_NAME, 
-        _ERROR_CTRL_AS, 
+        _ERROR_CONTROLLER_NAME, 
+        _ERROR_CONTROLLER_AS, 
         _HTML5_ENABLED, 
         _HASH_PREFIX
     ) {
@@ -87,16 +87,16 @@
         $stateProvider.state(_HOME_STATE_NAME, {
             url: _HOME_URL, 
             templateUrl: _HOME_TEMPLATE_URL,
-            controller: _HOME_CTRL_NAME, 
-            controllerAs: _HOME_CTRL_AS
+            controller: _HOME_CONTROLLER_NAME, 
+            controllerAs: _HOME_CONTROLLER_AS
         });
 
         // menu categories
         $stateProvider.state(_MENU_CATEGORIES_STATE_NAME, {
             url: _MENU_CATEGORIES_URL, 
             templateUrl: _MENU_CATEGORIES_TEMPLATE_URL,
-            controller: _MENU_CATEGORIES_CTRL_NAME, 
-            controllerAs: _MENU_CATEGORIES_CTRL_AS, 
+            controller: _MENU_CATEGORIES_CONTROLLER_NAME, 
+            controllerAs: _MENU_CATEGORIES_CONTROLLER_AS, 
             resolve: {
                 categories: [ "menuService", function(menuService) {
                     return menuService.getAllCategories();
@@ -108,8 +108,8 @@
         $stateProvider.state(_MENU_ITEMS_STATE_NAME, {
             url: _MENU_ITEMS_URL, 
             templateUrl: _MENU_ITEMS_TEMPLATE_URL,
-            controller: _MENU_ITEMS_CTRL_NAME, 
-            controllerAs: _MENU_ITEMS_CTRL_AS, 
+            controller: _MENU_ITEMS_CONTROLLER_NAME, 
+            controllerAs: _MENU_ITEMS_CONTROLLER_AS, 
             resolve: {
                 items: [ "$stateParams", "menuService", function($stateParams, menuService) {
                     return menuService.getAllMenuItems($stateParams.categoryShortName);
@@ -121,24 +121,24 @@
         $stateProvider.state(_MENU_ITEM_STATE_NAME, {
             url: _MENU_ITEM_URL, 
             templateUrl: _MENU_ITEM_TEMPLATE_URL,
-            controller: _MENU_ITEM_CTRL_NAME, 
-            controllerAs: _MENU_ITEM_CTRL_AS
+            controller: _MENU_ITEM_CONTROLLER_NAME, 
+            controllerAs: _MENU_ITEM_CONTROLLER_AS
         });
 
         // about
         $stateProvider.state(_ABOUT_STATE_NAME, {
             url: _ABOUT_URL, 
             templateUrl: _ABOUT_TEMPLATE_URL,
-            controller: _ABOUT_CTRL_NAME, 
-            controllerAs: _ABOUT_CTRL_AS
+            controller: _ABOUT_CONTROLLER_NAME, 
+            controllerAs: _ABOUT_CONTROLLER_AS
         });
 
         // error
         $stateProvider.state(_ERROR_STATE_NAME, {
             url: _ERROR_URL,
             templateUrl: _ERROR_TEMPLATE_URL, 
-            controller: _ERROR_CTRL_NAME, 
-            controllerAs: _ERROR_CTRL_AS
+            controller: _ERROR_CONTROLLER_NAME, 
+            controllerAs: _ERROR_CONTROLLER_AS
         });
 
         $urlRouterProvider.otherwise(_ERROR_URL);

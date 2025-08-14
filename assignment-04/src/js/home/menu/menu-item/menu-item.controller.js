@@ -27,7 +27,7 @@
         $ctrl.description = "Description";
 
         $ctrl.emptyGone = "No Item found for the Menu Item Short Name!";
-        $ctrl.searchBtnName = "Search";
+        $ctrl.searchButtonName = "Search";
         $ctrl.searchShortName = $stateParams.itemShortName;
 
         $ctrl.retrieveItem = function() {

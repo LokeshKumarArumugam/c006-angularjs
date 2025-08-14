@@ -24,12 +24,12 @@
     <header>
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-header">
-                <div class="nav-title">{{ "Chinese Menu Application" | uppercase }}</div>
+                <div class="navigation-title">{{ "Chinese Menu Application" | uppercase }}</div>
             </div>
         </nav>
     </header>
 
-    <div class="container-1 menu-bar-div">
+    <div class="container-1 menu-bar-division">
         <div class="tab-section-title">
             <h2>{{ "Chinese Menu Area" | uppercase }}</h2>
             <br />
@@ -44,9 +44,9 @@
         <!-- tab contents -->
         <!-- menu -->
         <div id="menu" class="tab-content" ng-if="appCtrl.isActiveTab('menu');" ng-controller="filteringMenuController as menuCtrl">
-            <div class="form-group search-form-div">
+            <div class="form-group search-form-division">
                 <input type="text" placeholder="Search Term" class="search-form-input" ng-model="menuCtrl.searchString">
-                <button type="button" class="btn btn-primary tab-btn" ng-click="menuCtrl.filterMenu(menuCtrl.searchString);">{{ menuCtrl.searchBtnName }}</button>
+                <button type="button" class="btn btn-primary tab-button" ng-click="menuCtrl.filterMenu(menuCtrl.searchString);">{{ menuCtrl.searchButtonName }}</button>
             </div>
             
             <found-items found-items="menuCtrl.filteredMenu" on-remove="menuCtrl.removeMenuItem(foundItemIndex);"></found-items>
